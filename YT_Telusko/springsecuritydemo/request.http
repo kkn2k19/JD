@@ -1,0 +1,38 @@
+# user- kkn
+# pass - 1234
+# we need to make base64 to use them
+# use this in linux or git bash terminal 
+#  --- echo -n "kkn:1234" | base64
+#  it provided a2tuOjEyMzQ=
+# which is base64 encoded username and password
+
+
+# GET http://localhost:1005 HTTP/1.1
+# # Authorization: Basic <base64-encoded-username-password>
+# Authorization: Basic a2tuOjEyMzQ=
+# Content-Type: application/json
+
+# HTTP/1.1 200 
+# Set-Cookie: JSESSIONID=61F57EF9E8C67F943C14B9144FCC04AF; Path=/; HttpOnly
+# X-Content-Type-Options: nosniff
+# X-XSS-Protection: 0
+# Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+# Pragma: no-cache
+# Expires: 0
+# X-Frame-Options: DENY
+# Content-Type: text/plain;charset=UTF-8
+# Content-Length: 49
+# Date: Fri, 21 Mar 2025 18:18:37 GMT
+# Connection: close
+
+# Welcome to my app61F57EF9E8C67F943C14B9144FCC04AF
+
+
+
+POST http://localhost:1005/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username" : "Sakti",
+    "password" : "s@101"
+}
